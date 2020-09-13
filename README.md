@@ -9,7 +9,9 @@ EXAMPLE:
 ```c#
             string accessKey = "YOUR_ACCESS_KEY";
             WeatherClient client = new WeatherClient(accessKey);
-            CurrrentWeatherModel data = client.GetCurrentWeather<CurrrentWeatherModel>("London", "en", "metric").Result;          
+            
+            CurrrentWeatherModel data = client.GetCurrentWeather<CurrrentWeatherModel>("London", "en", "metric").Result;  
+            
             double feelsLike = data.Main.FeelsLike;
             double tempMin = data.Main.TempMin;
             double tempMax = data.Main.TempMax;
