@@ -26,7 +26,7 @@ namespace Awesomio.Weather.NET
             return await _restApi.CallApiAsync<T>(apiCommand, requestType, args).ConfigureAwait(false);
         }
     
-        public async Task<T> GetCurrentWeather<T>(string cityName, string lang, string units = "metric", string accessToken = null, string version = "2.5")
+        public async Task<T> GetCurrentWeatherAsync<T>(string cityName, string lang, string units = "metric", string accessToken = null, string version = "2.5")
         {
             var args = new NameValueDictionary
             {
@@ -47,7 +47,7 @@ namespace Awesomio.Weather.NET
             return await CallApiAsync<T>($"/data/{version}/weather/", RequestType.Get, args).ConfigureAwait(false);
         }
 
-        public async Task<T> GetOneCallApi<T>(double lat, double lon, string lang, OneCallExclude[] exclude = null, string units = "metric", string accessToken = null, string version = "2.5")
+        public async Task<T> GetOneCallApiAsync<T>(double lat, double lon, string lang, OneCallExclude[] exclude = null, string units = "metric", string accessToken = null, string version = "2.5")
         {
             var args = new NameValueDictionary
             {

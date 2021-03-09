@@ -19,7 +19,7 @@ namespace Awesomio.Weather.NET.Tests
             
             WeatherClient qWMClient = new WeatherClient(accessKey);
             OneCallExclude[] oneCallExcludes = { OneCallExclude.Current, OneCallExclude.Daily };
-            OneCallModel data = qWMClient.GetOneCallApi<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
+            OneCallModel data = qWMClient.GetOneCallApiAsync<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
 
         }
 
@@ -29,7 +29,7 @@ namespace Awesomio.Weather.NET.Tests
             string accessKey = "YOUR_ACCESS_KEY";
            
             WeatherClient client = new WeatherClient(accessKey);
-            CurrrentWeatherModel data = client.GetCurrentWeather<CurrrentWeatherModel>("London", "en").Result;
+            CurrrentWeatherModel data = client.GetCurrentWeatherAsync<CurrrentWeatherModel>("London", "en").Result;
         }
     }
 }

@@ -10,13 +10,14 @@
       OpenWeatherMap based .NET API
       please see more info here https://github.com/awesomio/Weather.NET
       Simple .NET Weather API, currently gets the current weather and One Call API
-    </Description>
+</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/awesomio/Weather.NET/</PackageProjectUrl>
     <PackageTags>Weather,OpenWeatherMap, Forecast</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
+    <PackageReleaseNotes>Precipitation field (double instead int) bug fix</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
