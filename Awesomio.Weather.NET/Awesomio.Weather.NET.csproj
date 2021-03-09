@@ -6,8 +6,7 @@
     <Authors>awesomio</Authors>
     <Product>Weather.NET</Product>
     <PackageId>Awesomio.Weather</PackageId>
-    <Description>
-      OpenWeatherMap based .NET API
+    <Description>OpenWeatherMap based async .NET API
       please see more info here https://github.com/awesomio/Weather.NET
       Simple .NET Weather API, currently gets the current weather and One Call API
 </Description>
@@ -17,7 +16,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
     <Version>1.0.6</Version>
-    <PackageReleaseNotes>Precipitation field (double instead int) bug fix</PackageReleaseNotes>
+    <PackageReleaseNotes>Precipitation field (double instead int) bug fix. Renamed GetOneCallApi to GetOneCallApiAsync, GetCurrentWeather to GetCurrentWeatherAsync</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
