@@ -16,15 +16,18 @@ namespace Awesomio.Weather.NET.Tests
         public void GetOneCallApiTest()
         {
             string accessKey = "YOUR_ACCESS_KEY";
+            
             WeatherClient qWMClient = new WeatherClient(accessKey);
             OneCallExclude[] oneCallExcludes = { OneCallExclude.Current, OneCallExclude.Daily };
             OneCallModel data = qWMClient.GetOneCallApi<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
+
         }
 
         [TestMethod()]
         public void GetCurrentWeatherTest()
         {
             string accessKey = "YOUR_ACCESS_KEY";
+           
             WeatherClient client = new WeatherClient(accessKey);
             CurrrentWeatherModel data = client.GetCurrentWeather<CurrrentWeatherModel>("London", "en").Result;
         }

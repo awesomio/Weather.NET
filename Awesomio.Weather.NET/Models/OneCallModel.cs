@@ -71,7 +71,7 @@ namespace Awesomio.Weather.NET.Models.OneCall
         public int Dt { get; set; }
 
         [JsonProperty("precipitation")]
-        public int Precipitation { get; set; }
+        public double Precipitation { get; set; }
     }
 
     public class Hourly
