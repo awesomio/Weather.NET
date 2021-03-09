@@ -10,13 +10,13 @@ EXAMPLE:
             string accessKey = "YOUR_ACCESS_KEY";
             WeatherClient client = new WeatherClient(accessKey);
             
-            CurrrentWeatherModel data = client.GetCurrentWeather<CurrrentWeatherModel>("London", "en", "metric").Result;  
+            CurrrentWeatherModel data = client.GetCurrentWeatherAsync<CurrrentWeatherModel>("London", "en", "metric").Result;  
             
             double feelsLike = data.Main.FeelsLike;
             double tempMin = data.Main.TempMin;
             double tempMax = data.Main.TempMax;
                        
             OneCallExclude[] oneCallExcludes = { OneCallExclude.Current, OneCallExclude.Daily };
-            OneCallModel dataOneCall = client.GetOneCallApi<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
+            OneCallModel dataOneCall = client.GetOneCallApiAsync<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
                 
 ```
