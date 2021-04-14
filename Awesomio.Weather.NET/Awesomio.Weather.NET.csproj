@@ -15,8 +15,10 @@
     <PackageTags>Weather,OpenWeatherMap, Forecast</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.6</Version>
-    <PackageReleaseNotes>Precipitation field (double instead int) bug fix. Renamed GetOneCallApi to GetOneCallApiAsync, GetCurrentWeather to GetCurrentWeatherAsync</PackageReleaseNotes>
+    <Version>1.0.7</Version>
+    <PackageReleaseNotes>Added new fields and deleted inactive! (according to api).
+Code optimized.
+Tests have been greatly improved.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Awesomio.Weather.NET.Extensions;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,8 +62,20 @@ namespace Awesomio.Weather.NET.Models.OneCall
         [JsonProperty("wind_deg")]
         public int WindDeg { get; set; }
 
+        [JsonProperty("wind_gust")]
+        public double WindGust { get; set; }
+
         [JsonProperty("weather")]
         public List<Weather> Weather { get; set; }
+
+        public string WindDirection
+        {
+            get
+            {
+                string windDirection = WeatherHelper.DegToCompass(WindDeg);
+                return windDirection;
+            }
+        }
     }
 
     public class Minutely
@@ -94,6 +107,9 @@ namespace Awesomio.Weather.NET.Models.OneCall
         [JsonProperty("dew_point")]
         public double DewPoint { get; set; }
 
+        [JsonProperty("uvi")]
+        public double Uvi { get; set; }
+
         [JsonProperty("clouds")]
         public int Clouds { get; set; }
 
@@ -106,11 +122,23 @@ namespace Awesomio.Weather.NET.Models.OneCall
         [JsonProperty("wind_deg")]
         public int WindDeg { get; set; }
 
+        [JsonProperty("wind_gust")]
+        public double WindGust { get; set; }
+
         [JsonProperty("weather")]
         public List<Weather> Weather { get; set; }
 
         [JsonProperty("pop")]
         public double Pop { get; set; }
+
+        public string WindDirection
+        {
+            get
+            {
+                string windDirection = WeatherHelper.DegToCompass(WindDeg);
+                return windDirection;
+            }
+        } 
     }
 
     public class Temp
@@ -161,6 +189,15 @@ namespace Awesomio.Weather.NET.Models.OneCall
         [JsonProperty("sunset")]
         public int Sunset { get; set; }
 
+        [JsonProperty("moonrise")]
+        public int Moonrise { get; set; }
+
+        [JsonProperty("moonset")]
+        public int Moonset { get; set; }
+
+        [JsonProperty("moon_phase")]
+        public double MoonPhase { get; set; }
+
         [JsonProperty("temp")]
         public Temp Temp { get; set; }
 
@@ -182,6 +219,9 @@ namespace Awesomio.Weather.NET.Models.OneCall
         [JsonProperty("wind_deg")]
         public int WindDeg { get; set; }
 
+        [JsonProperty("wind_gust")]
+        public double WindGust { get; set; }
+
         [JsonProperty("weather")]
         public List<Weather> Weather { get; set; }
 
@@ -193,6 +233,16 @@ namespace Awesomio.Weather.NET.Models.OneCall
 
         [JsonProperty("uvi")]
         public double Uvi { get; set; }
+
+        public string WindDirection
+        {
+            get
+            {
+                string windDirection = WeatherHelper.DegToCompass(WindDeg);
+                return windDirection;
+            }
+        }
+
     }
 
     public class OneCallModel
@@ -220,5 +270,7 @@ namespace Awesomio.Weather.NET.Models.OneCall
 
         [JsonProperty("daily")]
         public List<Daily> Daily { get; set; }
+     
     }
+
 }

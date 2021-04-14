@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Awesomio.Weather.NET.Extensions;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -49,35 +50,24 @@ namespace Awesomio.NET.Models.CurrentWeather
         [JsonProperty("humidity")]
         public int Humidity { get; set; }
 
-        [JsonProperty("sea_level")]
-        public int SeaLevel { get; set; }
 
-        [JsonProperty("grnd_level")]
-        public int GrndLevel { get; set; }
     }
 
     public class Wind
     {
-        private string DegToCompass(int degree)
-        {
-            string[] arr = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW" };
-            degree = (int)(degree / 22.5 + 0.5);
-            return arr[degree % 16];
-        }
 
         [JsonProperty("speed")]
         public double Speed { get; set; }
 
         [JsonProperty("deg")]
         public int Deg { get; set; }
-
-        private string windDirection;
-
+        
         public string WindDirection
         {
             get
             {
-                windDirection = DegToCompass(Deg);
+                
+                string windDirection = WeatherHelper.DegToCompass(Deg);
                 return windDirection;
             }
         }
@@ -91,6 +81,12 @@ namespace Awesomio.NET.Models.CurrentWeather
 
     public class Sys
     {
+        [JsonProperty("type")]
+        public int Type { get; set; }
+
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
         [JsonProperty("country")]
         public string Country { get; set; }
 
