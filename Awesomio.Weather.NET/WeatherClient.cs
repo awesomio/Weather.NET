@@ -78,5 +78,28 @@ namespace Awesomio.Weather.NET
 
             return await CallApiAsync<T>($"/data/{version}/onecall", RequestType.Get, args).ConfigureAwait(false);
         }
+
+        public async Task<T> GetOneCallHistoryApiAsync<T>(DateTime dt, double lat, double lon, string lang, string units = "metric", string accessToken = null, string version = "2.5")
+        {
+            var args = new NameValueDictionary
+            {
+                {"lat", lat.ToString(CultureInfo.InvariantCulture)},
+                {"lon", lon.ToString(CultureInfo.InvariantCulture)},
+                {"lang", lang},
+                {"units", units},
+                {"dt", "" + new DateTimeOffset(dt).ToUnixTimeSeconds()},
+            };
+
+            if (accessToken == null)
+            {
+                args.Add("appid", m_accessKey.ToString(CultureInfo.InvariantCulture));
+            }
+            else if (accessToken != null)
+            {
+                args.Add("appid", accessToken.ToString(CultureInfo.InvariantCulture));
+            }
+
+            return await CallApiAsync<T>($"/data/{version}/onecall/timemachine", RequestType.Get, args).ConfigureAwait(false);
+        }
     }
 }
