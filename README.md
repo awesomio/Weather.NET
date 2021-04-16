@@ -5,7 +5,7 @@ Simple .NET Weather API, currently gets the current weather, One Call API and On
  
 Please, see https://openweathermap.org/api to start easy :)
 
-EXAMPLE:
+## Usage
 ```c#
             string accessKey = "YOUR_ACCESS_KEY";
             WeatherClient client = new WeatherClient(accessKey);
@@ -20,3 +20,9 @@ EXAMPLE:
             OneCallModel dataOneCall = client.GetOneCallApiAsync<OneCallModel>(40.12, 96.66, "en", oneCallExcludes).Result;
                 
 ```
+
+## Contributing
+We'd greatly appreciate any contribution you make. :) 
+- [awesomio](https://github.com/awesomio) - creator
+- [gumshoes](https://github.com/gumshoes)
+
