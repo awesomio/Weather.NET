@@ -22,7 +22,7 @@ Tests have been greatly improved.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\разное\serg\фотошоп нужный\COMPANY LOGO\logo.png">
+    <None Include="logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
