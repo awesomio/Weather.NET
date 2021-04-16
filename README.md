@@ -1,8 +1,8 @@
 # Weather.NET
 OpenWeatherMap based .NET API
 
-Simple .NET Weather API, currently gets the current weather and One Call API
-
+Simple .NET Weather API, currently gets the current weather, One Call API and One Call API historical weather data
+ 
 Please, see https://openweathermap.org/api to start easy :)
 
 EXAMPLE:
