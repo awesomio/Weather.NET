@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Awesomio.Weather.NET.Extensions
+﻿namespace Awesomio.Weather.NET.Extensions
 {
     public static class WeatherHelper
     {

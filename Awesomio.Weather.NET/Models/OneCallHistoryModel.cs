@@ -19,6 +19,54 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         public string Icon { get; set; }
     }
 
+    public class MainForecast
+    {
+        [JsonProperty("temp")]
+        public double Temp { get; set; }
+
+        [JsonProperty("feels_like")]
+        public double FeelsLike { get; set; }
+
+        [JsonProperty("temp_min")]
+        public double TempMin { get; set; }
+
+        [JsonProperty("TempMax")]
+        public double TempMax { get; set; }
+
+        [JsonProperty("pressure")]
+        public int Pressure { get; set; }
+
+        [JsonProperty("sea_level")]
+        public int SeaLevel { get; set; }
+
+        [JsonProperty("grnd_level")]
+        public int GroundLevel { get; set; }
+
+        [JsonProperty("humidity")]
+        public int Humidity { get; set; }
+
+        [JsonProperty("temp_kf")]
+        public double TempKf { get; set; }
+    }
+
+    public class CloudsForecast
+    {
+        [JsonProperty("all")]
+        public int All { get; set; }
+    }
+
+    public class WindForecast
+    {
+        [JsonProperty("speed")]
+        public double WindSpeed { get; set; }
+
+        [JsonProperty("deg")]
+        public int WindDeg { get; set; }
+
+        [JsonProperty("gust")]
+        public double WindGust { get; set; }
+    }
+
     public class Current
     {
         [JsonProperty("dt")]
@@ -185,5 +233,41 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
 
         [JsonProperty("hourly")]
         public List<Hourly> Hourly { get; set; }
+    }
+
+    public class HourlyForecastModel
+    {
+        [JsonProperty("cnt")]
+        public double NumHourlyForecasts { get; set; }
+
+        [JsonProperty("list")]
+        public List<HourlyForecast> HourlyForecasts { get; set; }
+    }
+
+    public class HourlyForecast
+    {
+        [JsonProperty("dt")]
+        public int Dt { get; set; }
+
+        [JsonProperty("main")]
+        public MainForecast MainForecast { get; set; }
+
+        [JsonProperty("weather")]
+        public List<Weather> Weather { get; set; }
+
+        [JsonProperty("clouds")]
+        public CloudsForecast CloudsForecast { get; set; }
+
+        [JsonProperty("wind")]
+        public WindForecast WindForecast { get; set; }
+
+        [JsonProperty("visibility")]
+        public int Visibility { get; set; }
+
+        [JsonProperty("pop")]
+        public double Pop { get; set; }
+
+        [JsonProperty("dt_txt")]
+        public string DtTxt { get; set; }
     }
 }
