@@ -11,7 +11,7 @@ namespace Awesomio.Weather.NET.Tests
     [TestClass()]
     public class WeatherClientTests
     {
-        private const string AccessKey = "49484dcc1362800e79a737bc527fa7c9";
+        private const string AccessKey = "<YOUR API KEY HERE>";
         private List<Сoordinates> _citiesCoordinates = new List<Сoordinates>()
         {
             new Сoordinates() {Lat = -35.280937, Lon = 149.130009},
