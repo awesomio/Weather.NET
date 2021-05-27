@@ -8,17 +8,16 @@
     <PackageId>Awesomio.Weather</PackageId>
     <Description>OpenWeatherMap based async .NET API
       please see more info here https://github.com/awesomio/Weather.NET
-      Simple .NET Weather API, currently gets the current weather and One Call API
+      Simple .NET Weather API, currently gets supports current weather, One Call API, and hourly forecasts.
 </Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/awesomio/Weather.NET/</PackageProjectUrl>
-    <PackageTags>Weather,OpenWeatherMap, Forecast</PackageTags>
+    <PackageTags>Weather, OpenWeatherMap, Forecast</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.7</Version>
-    <PackageReleaseNotes>Added new fields and deleted inactive! (according to api).
-Code optimized.
-Tests have been greatly improved.</PackageReleaseNotes>
+    <Version>1.0.8</Version>
+    <PackageReleaseNotes>Added support for https://openweathermap.org/api/hourly-forecast.</PackageReleaseNotes>
+    <FileVersion>1.0.8.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
