@@ -13,8 +13,6 @@ namespace Awesomio.Weather.NET
 {
     internal class WeatherRestApi
     {
-        private const string DefaultApiUrl = "https://api.openweathermap.org/";
-
         private static readonly DateTime _unixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
         private readonly HttpClient _client;
@@ -25,7 +23,7 @@ namespace Awesomio.Weather.NET
         public WeatherRestApi(string accessKey, int apiTimeoutSec, string overrideBaseAddress = null)
         {
             if (overrideBaseAddress == null)
-                overrideBaseAddress = DefaultApiUrl;
+                overrideBaseAddress = WeatherClient.DefaultApiUrl;
 
             _accessKey = accessKey;
 
@@ -55,7 +53,6 @@ namespace Awesomio.Weather.NET
             {
                 if (args != null && args.Any())
                 {
-
                     httpContent = new FormUrlEncodedContent(args);
                 }
             }

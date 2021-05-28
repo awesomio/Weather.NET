@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Awesomio.Weather.NET.Enums
+﻿namespace Awesomio.Weather.NET.Enums
 {
     public enum OneCallExclude
     {

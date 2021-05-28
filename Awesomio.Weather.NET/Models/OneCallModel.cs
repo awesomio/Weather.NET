@@ -1,8 +1,6 @@
 ﻿using Awesomio.Weather.NET.Extensions;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Awesomio.Weather.NET.Models.OneCall
 {
