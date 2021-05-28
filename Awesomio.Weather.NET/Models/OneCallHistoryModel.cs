@@ -326,7 +326,7 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         public long Sunrise { get; set; }
 
         [JsonProperty("sunset")]
-        public long sunset { get; set; }
+        public long Sunset { get; set; }
     }
 
     public class Coord
