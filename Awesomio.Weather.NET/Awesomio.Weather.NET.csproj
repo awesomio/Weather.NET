@@ -15,7 +15,7 @@
     <PackageTags>Weather, OpenWeatherMap, Forecast</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.1.10</Version>
+    <Version>1.1.0</Version>
     <PackageReleaseNotes>Added additional fields for https://openweathermap.org/api/hourly-forecast</PackageReleaseNotes>
     <FileVersion>1.0.8.0</FileVersion>
     <RepositoryUrl>https://github.com/awesomio/Weather.NET/</RepositoryUrl>
