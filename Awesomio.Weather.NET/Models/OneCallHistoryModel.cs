@@ -1,4 +1,5 @@
-﻿using Awesomio.Weather.NET.Extensions;
+﻿using System;
+using Awesomio.Weather.NET.Extensions;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
@@ -242,12 +243,15 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
 
         [JsonProperty("list")]
         public List<HourlyForecast> HourlyForecasts { get; set; }
+
+        [JsonProperty("city")]
+        public City City { get; set; }
     }
 
     public class HourlyForecast
     {
         [JsonProperty("dt")]
-        public int Dt { get; set; }
+        public long Dt { get; set; }
 
         [JsonProperty("main")]
         public MainForecast MainForecast { get; set; }
@@ -269,5 +273,41 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
 
         [JsonProperty("dt_txt")]
         public string DtTxt { get; set; }
+    }
+
+    public class City
+    {
+        [JsonProperty("id")]
+        public UInt64 Id { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("coord")]
+        public Coord Coord { get; set; }
+
+        [JsonProperty("country")]
+        public string Country { get; set; }
+
+        [JsonProperty("population")]
+        public UInt64 Population { get; set; }
+
+        [JsonProperty("timezone")]
+        public int TimezoneOffset { get; set; }
+
+        [JsonProperty("sunrise")]
+        public long Sunrise { get; set; }
+
+        [JsonProperty("sunset")]
+        public long sunset { get; set; }
+    }
+
+    public class Coord
+    {
+        [JsonProperty("lat")] 
+        public double Lat { get; set; }
+
+        [JsonProperty("lon")]
+        public double Lon { get; set; }
     }
 }
