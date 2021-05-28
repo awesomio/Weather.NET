@@ -68,6 +68,24 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         public double WindGust { get; set; }
     }
 
+    public class RainForecast
+    {
+        [JsonProperty("1h")]
+        public double RainMillis { get; set; }
+    }
+
+    public class SnowForecast
+    {
+        [JsonProperty("1h")]
+        public double SnowMillis { get; set; }
+    }
+
+    public class Sys
+    {
+        [JsonProperty("pod")]
+        public string PeriodOfDay { get; set; }
+    }
+
     public class Current
     {
         [JsonProperty("dt")]
@@ -265,11 +283,20 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         [JsonProperty("wind")]
         public WindForecast WindForecast { get; set; }
 
+        [JsonProperty("rain")]
+        public RainForecast RainForecast { get; set; }
+
+        [JsonProperty("snow")]
+        public SnowForecast SnowForecast { get; set; }
+
         [JsonProperty("visibility")]
         public int Visibility { get; set; }
 
         [JsonProperty("pop")]
         public double Pop { get; set; }
+
+        [JsonProperty("sys")]
+        public Sys Sys { get; set; }
 
         [JsonProperty("dt_txt")]
         public string DtTxt { get; set; }
