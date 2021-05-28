@@ -15,7 +15,7 @@
     <PackageTags>Weather, OpenWeatherMap, Forecast</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.8</Version>
+    <Version>1.0.9</Version>
     <PackageReleaseNotes>Added support for https://openweathermap.org/api/hourly-forecast.</PackageReleaseNotes>
     <FileVersion>1.0.8.0</FileVersion>
   </PropertyGroup>
