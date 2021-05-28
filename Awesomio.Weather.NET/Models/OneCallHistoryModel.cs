@@ -34,18 +34,30 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         [JsonProperty("TempMax")]
         public double TempMax { get; set; }
 
+        /// <summary>
+        /// pressure at sea level
+        /// </summary>
         [JsonProperty("pressure")]
         public int Pressure { get; set; }
 
+        /// <summary>
+        /// pressure at sea level
+        /// </summary>
         [JsonProperty("sea_level")]
-        public int SeaLevel { get; set; }
+        public int SeaLevelPressure { get; set; }
 
+        /// <summary>
+        /// pressure at ground level
+        /// </summary>
         [JsonProperty("grnd_level")]
-        public int GroundLevel { get; set; }
+        public int GroundLevelPressure { get; set; }
 
         [JsonProperty("humidity")]
         public int Humidity { get; set; }
 
+        /// <summary>
+        /// internal parameter
+        /// </summary>
         [JsonProperty("temp_kf")]
         public double TempKf { get; set; }
     }
@@ -254,6 +266,9 @@ namespace Awesomio.Weather.NET.Models.OneCallHistory
         public List<Hourly> Hourly { get; set; }
     }
 
+    /// <summary>
+    /// https://openweathermap.org/api/hourly-forecast
+    /// </summary>
     public class HourlyForecastModel
     {
         [JsonProperty("cnt")]
